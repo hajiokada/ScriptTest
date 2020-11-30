@@ -25,7 +25,7 @@ public class Boss
 
         if (mp < 5)
 		{
-            Debug.Log("MP不足のため魔法は使えません。");
+            Debug.Log("MP不足のため魔法は使えません、、");
 		}
 	}
 }
