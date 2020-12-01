@@ -41,11 +41,11 @@ public class Test : MonoBehaviour
 
 
         int[] array = {1, 2, 3, 4, 5};
-        for (int junban = 0; junban < array.Length; junban++)
+        for (int junban = 0; junban <= 4 ; junban++)
         {
             Debug.Log(array [junban]);
         }
-        for (int gyaku = 4; gyaku < array.Length; gyaku--)
+        for (int gyaku = 4; gyaku >= 0 ; gyaku--)
         {
             Debug.Log(array [gyaku]);
         }
