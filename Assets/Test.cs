@@ -25,7 +25,7 @@ public class Boss
 
         if (mp < 5)
 		{
-            Debug.Log("MP不足のため魔法は使えません、、");
+            Debug.Log("MP不足のため魔法は使えません");
 		}
 	}
 }
@@ -37,7 +37,12 @@ public class Test : MonoBehaviour
         Boss myBoss = new Boss();
         myBoss.Attack(); //Attackを実行
         myBoss.Damage(30); //Damageに30を代入して実行
-        myBoss.Magic();
+        
+        for (int kaisu = 1; kaisu <= 10; kaisu++)
+        {
+            myBoss.Magic();
+        }
+
 
 
         int[] array = {1, 2, 3, 4, 5};
