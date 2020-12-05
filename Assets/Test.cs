@@ -20,10 +20,13 @@ public class Boss
 
     public void Magic ()
 	{
-        this.mp -= 5;
-        Debug.Log("魔法攻撃をした。残りMPは" + mp);
+        if (mp - 5 >= 0)
+        {
+            this.mp -= 5;
+            Debug.Log("魔法攻撃をした。残りMPは" + mp);
+        }
 
-        if (mp < 5)
+        if (mp - 5 < 0)
 		{
             Debug.Log("MP不足のため魔法は使えません");
 		}
@@ -38,7 +41,7 @@ public class Test : MonoBehaviour
         myBoss.Attack(); //Attackを実行
         myBoss.Damage(30); //Damageに30を代入して実行
         
-        for (int kaisu = 1; kaisu <= 10; kaisu++)
+        for (int kaisu = 1; kaisu <= 11; kaisu++)
         {
             myBoss.Magic();
         }
